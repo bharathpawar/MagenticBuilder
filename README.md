@@ -5,12 +5,14 @@ Uses Azure AI + agent_framework
 Orchestrated using Magentic workflow
 UI available via DevUI
 🔹 Key Components
+
 1. Environment Setup
 Uses .env file
 Required variables:
 AZURE_AI_PROJECT_ENDPOINT
 AZURE_AI_MODEL_DEPLOYMENT_NAME
 Auth via AzureCliCredential
+
 2. Client Creation
 AzureOpenAIResponsesClient used
 Shared across all agents
@@ -58,6 +60,7 @@ Runs on: http://localhost:8093
 Enabled using:
 
 serve(entities=[workflow], port=8093)
+
 Purpose:
 Visualize workflow
 Debug agent interactions
@@ -68,10 +71,12 @@ LLM Orchestration
 Structured Output (Pydantic)
 Feedback Loop System
 Azure AI Integration
+
 🔹 Common Issues
 Serialization errors → avoid custom objects (like Message)
 Missing env vars → check .env
 Auth issues → run az login
+
 🔹 Use Cases
 Content generation pipelines
 AI review systems
